@@ -158,3 +158,29 @@ li a.phone{
     width: 100%;
     height: 520px;
 }
+
+
+
+
+
+
+
+/* NEXT SMALLEST PHONE SIZE 390px (iphone 12 etc) */
+
+@media screen and (min-width:390px) {
+    header {
+        max-height: 250px;
+    }
+    header h1 {
+        height:80px;
+    }
+    header h2{
+        font-size: 1rem;
+    }
+    .img-container{
+        top: 169px;
+    }
+    .img-container article {
+        top: 330px;
+    }
+}
