@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bite Sized building Co - Bite Sized Homes. Full Course Living.</title>
+    <title>Bite Sized Building Company - Bite Sized Homes. Full Course Living.</title>
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/fonts/webfontkit.css" rel="stylesheet" type="text/css" />
@@ -34,7 +34,7 @@
             <div class="img-container">
                 <article class="hero-content">
                     <h3>Picture Yourself...</h3>
-                    <p>In one of our <strong>modern tiny homes.</strong> We make it easy to build the <strong>home of your dreams.</strong></p>
+                    <p>In one of our <strong>modern tiny homes.</strong> We make building the <strong>home of your dreams</strong> easy, stylish and afforable. </p>
                     <h4><a href="">Shop Our Designs</a></h4>
                 </article>
             </div>
@@ -45,13 +45,58 @@
 
 
     <main>
-
+Home Page
     </main>
 
 
 
     <footer>
+        <div class="footer-wrapper">
+            <section class="contact">
+                <h4>Bite Sized Building Company</h4>
+                <h5>2408 Northside Drive</h5>
+                <h5>San Diego, CA 92108</h5>
+                <h5>Open 9am - 5pm PST</h5>
+                <h5><a href="tel:6195551234">(619) 555-1234</a></h5>
+            </section>
+            <section class="site-map">
+                <ul>
+                    <li class="title"><a href="">Builds</a></li>
+                    <li><a href="">Tiny Homes</a></li>
+                    <li><a href="">Converted Container</a></li>
+                    <li><a href="">Furniture Gallery</a></li>
+                </ul>
+                <ul>
+                    <li class="title"><a href="">Services</a></li>
+                    <li><a href="">Design</a></li>
+                    <li><a href="">Builders</a></li>
+                </ul>
+                <ul>
+                    <li class="title"><a href="">Team</a></li>
+                    <li><a href="">Contractors</a></li>
+                    <li><a href="">Our Story</a></li>
+                </ul>
+                <ul>
+                    <li class="title"><a href="">Contact Us</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Build Our Homes</a></li>
+                </ul>
+            </section>
+            <ul class="social">
+                <li><a href="http://facebook.com" target="_blank"><img src="img/facebookicon.png" alt="the facebook icon"></a></li>
+                <li><a href="http://instagram.com" target="_blank"><img src="img/instaicon.png" alt="the instagram icon"></a></li>
+                <li><a href="http://tiktok.com" target="_blank"><img src="img/tiktokicon.png" alt="the tiktok icon"></a></li>
+                <li><a href="http://twitter.com" target="_blank"><img src="img/twittericon.png" alt="the twitter icon"></a></li>
 
+            </ul>
+        </div>
+        <small><i class="far fa-copyright"></i> Bite Sized Building Company 2022</small>
+        <div class="footer-wrapper">
+            <a href="http://ginnygraybill.com" target="_blank"><img src="img/ggdesignslogo.png" alt="the G G Designs logo"/></a>
+            <small>Designed by <a href="http://ginnygraybill.com" target="_blank"><strong>Ginny Graybill Designs</strong></a> 2022
+            <p>For WC300 at Platt College - San Diego</p></small>
+        </div>
     </footer>
 
 
@@ -67,8 +112,9 @@
                 bars.next().slideDown(900);
                 bars.parent().next().find('.hero-content').fadeOut(700);
                 bars.removeClass('closed').addClass('open');
-                head.find('h2').transition({'color':'#fff'}, 500);
+                head.find('h2').transition({'color':'#ece7ef'}, 500);
                 head.parent().transition({'background-color':'rgba(24, 59, 72, .9)'}, 500);
+                bars.transition({'color':'#c2e1c9'},200);
             }
             else if (bars.hasClass('open')){
                 bars.next().slideUp(900);
@@ -76,6 +122,7 @@
                 bars.removeClass('open').addClass('closed');
                 head.find('h2').transition({'color':'#183b48'}, 500);
                 head.parent().transition({'background-color':'#ece7ef'}, 500);
+                bars.transition({'color':'#ece7ef'},200);
             }
 
             

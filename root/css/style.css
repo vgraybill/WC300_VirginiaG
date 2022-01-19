@@ -59,7 +59,7 @@ nav{
     width: 100%;
     color:#ece7ef;
     text-align: center;
-    border-top: 1px solid #183b48
+    border-top: 1px solid #183b48;
 }
 nav i {
     width: 100%;
@@ -75,6 +75,7 @@ nav ul {
 li h4{
     padding: 40px 0 20px;
     font-family: 'goldbill_i';
+    font-weight: lighter;
     text-align: center;
 }
 li h5{
@@ -113,7 +114,7 @@ li a.phone{
 }
 .img-container article {
     position: relative;
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     top: 290px;
     color: #ece7ef;
@@ -121,8 +122,9 @@ li a.phone{
 
 .img-container article h3 {
     font-family: 'goldbill_i', sans-serif;
+    font-weight: lighter;
     font-style: italic;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     padding-bottom: 15px;    
 }
 .img-container article p{
@@ -159,7 +161,74 @@ li a.phone{
     height: 520px;
 }
 
+/* MAIN STYLES HOME PAGE */
 
+main {
+    position: relative;
+    top: 400px;
+    background-color: #ece7ef;
+}
+
+/* FOOTER STYLES */
+
+footer{
+    position: relative;
+    top: 400px;
+    background-color: rgba(24, 59, 72, .8);
+    color: #ece7ef;
+    font-size: .9rem;
+    padding: 20px 15px;
+}
+.contact h4 {
+    font-family: 'goldbill_i';
+    font-size: .99rem;
+    font-weight: lighter;
+    padding-bottom: 7px;
+}
+.contact h5{
+    font-size: .8rem;
+    padding: 1px 0;
+    font-weight: lighter;
+}
+.contact h5 a{
+    font-weight: bold;
+
+}
+footer ul{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: #c2e1c9
+}
+
+footer li.title {
+    padding-top: 30px;
+    font-size: 1.25rem;
+}
+footer .title ~ li {
+    text-indent: 15px;
+    padding-top: 15px;
+}
+
+footer .social{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 10px;
+}
+footer div{
+    width: 95%;
+}
+footer div img{
+    margin:  0 auto;
+    text-align: center;
+    display: block;
+}
+footer small{
+    text-align: center;
+    display: block;
+    padding-bottom: 50px;
+}
 
 
 
@@ -177,10 +246,37 @@ li a.phone{
     header h2{
         font-size: 1rem;
     }
+    nav i {
+        font-size: 2.25rem;
+    }
+    nav ul {
+        height: 470px;
+    }
     .img-container{
         top: 169px;
     }
     .img-container article {
         top: 330px;
     }
+    .img-container article h3 {
+        font-size: 1.75rem;
+    }
+
+
+    /* MAIN STYLES 390px */
+
+    main {
+        top: 440px
+    }
+
+
+
+
+    /* FOOTER STYLES 390px */
+
+    footer {
+        top:440px;
+    }
+
+
 }
