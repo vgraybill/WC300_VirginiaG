@@ -1,0 +1,160 @@
+/* font-family: 'goldbill';
+font-family: 'goldbill_i';
+font-family: 'hpbold';
+font-family: 'hpbold_i';
+font-family: 'hp';
+font-family: 'hp_i';
+font-family: 'hplight';
+font-family: 'hplight'; */
+
+* {
+    box-sizing: border-box;
+}
+
+/* SMALLEST SIZE 280px (Galaxy Fold) */
+body {
+    font-family: 'hplight', sans-serif;
+    font-size: .7rem;
+    color: #183b48;
+    letter-spacing: 1px;
+    line-height: 1.25rem;
+}
+header{
+    max-height: 250px;
+    background-color: #ece7ef;
+    position: relative;
+}
+header h6 {
+    background-color: #5f5449;
+    font-family: 'hplight', sans-serif;
+    text-align: center;
+    padding: 7px 0 ;
+    color: #ece7ef;
+}
+header h6 span {
+    display: hidden;
+}
+header h1 {
+    width: 87%;
+    background-image: url("../img/logo-small.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-indent: -9999px;
+    height: 60px;
+    margin: 15px auto 5px;
+}
+header h2 {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: .75rem;
+    font-family: 'hplight', sans-serif;
+}
+nav{
+    font-size: 1.75rem;
+    padding-top: 7px;
+    background-color: rgba(24, 59, 72, .9);
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    color:#ece7ef;
+    text-align: center;
+    border-top: 1px solid #183b48
+}
+nav i {
+    width: 100%;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+nav ul {
+    text-align: left;
+    height: 480px;
+    padding: 0 15px;
+    display: none;
+}
+li h4{
+    padding: 40px 0 20px;
+    font-family: 'goldbill_i';
+    text-align: center;
+}
+li h5{
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+nav ul a {
+    color: #ece7ef;
+    line-height: 3rem;
+    text-decoration: none;
+    font-family: 'hpbold';
+    letter-spacing: 2px;
+}
+li a.phone{
+    background-color: transparent;
+    border: 2px solid #c2e1c9;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    padding: 0 20px;
+    margin: 30px auto;
+    line-height: 2.5rem;
+}
+
+.img-container {
+    background-image: url(../img/hero-small.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    position:absolute;
+    top: 149px;
+}
+.img-container article {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    top: 290px;
+    color: #ece7ef;
+}
+
+.img-container article h3 {
+    font-family: 'goldbill_i', sans-serif;
+    font-style: italic;
+    font-size: 1.75rem;
+    padding-bottom: 15px;    
+}
+.img-container article p{
+    text-indent: 20px;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.6rem;
+    margin-bottom: 40px;
+}
+.img-container article h4 {
+
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.img-container article a {
+    text-decoration: none;
+    background-color: #c2e1c9;
+    border: 2px solid transparent;
+    color: #183b48;
+    font-size: 1.1rem;
+    color: #183b48;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+.img-container article a:hover {
+    background-color: transparent;
+    border: 2px solid #c2e1c9;
+    color: #c2e1c9;
+}
+.hero {
+    background-color: #5f5449;
+    width: 100%;
+    height: 520px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite Sized building Co - Bite Sized Homes. Full Course Living.</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/fonts/webfontkit.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/843ca2f650.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h6>Financing your home is now easier than ever! <i class="fas fa-child"></i></h6>
+        <div class="header-wrapper">
+            <h1>Bite Sized Building Company - Tiny Home Construction</h1>
+            <h2>Bite Sized Homes. Full Course Living. <i class="far fa-heart"></i></h2>
+        </div>
+        <nav>
+            <i class="fas fa-bars closed"></i>
+            <ul>
+                <a href=""><li>Builds</li></a>
+                <a href=""><li>Services</li></a>
+                <a href=""><li>Team</li></a>
+                <a href=""><li>Story</li></a>
+                <a href=""><li>Contact</li></a>
+                <li><h4>Have Questions?</h4></li>
+                <li><h5>Open 9am - 5pm PST</h5></li>
+                <li><a class="phone" href="tel:6195551234">(619) 555-1234</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <div class="img-container">
+                <article class="hero-content">
+                    <h3>Picture Yourself...</h3>
+                    <p>In one of our <strong>modern tiny homes.</strong> We make it easy to build the <strong>home of your dreams.</strong></p>
+                    <h4><a href="">Shop Our Designs</a></h4>
+                </article>
+            </div>
+
+        </section>
+    </header>
+
+
+
+    <main>
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha512-VRuRE7kBxU+JQr4R/7Y75cMMdeNnn5zDZRpT4qtEzAJXdMkmFPPGbS56Ch9/Lr2g5vnwN7PxtIdBvevTMVpnug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        $('.fa-bars').on('click', function(){
+            let bars = $(this)
+            let head = bars.parent().parent().find('.header-wrapper')
+            console.log(head)
+            if(bars.hasClass('closed')){
+                bars.next().slideDown(900);
+                bars.parent().next().find('.hero-content').fadeOut(700);
+                bars.removeClass('closed').addClass('open');
+                head.find('h2').transition({'color':'#fff'}, 500);
+                head.parent().transition({'background-color':'rgba(24, 59, 72, .9)'}, 500);
+            }
+            else if (bars.hasClass('open')){
+                bars.next().slideUp(900);
+                bars.parent().next().find('.hero-content').fadeIn(700);
+                bars.removeClass('open').addClass('closed');
+                head.find('h2').transition({'color':'#183b48'}, 500);
+                head.parent().transition({'background-color':'#ece7ef'}, 500);
+            }
+
+            
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

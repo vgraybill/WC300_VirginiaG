@@ -1,0 +1,12 @@
+
+
+FONT AWESOME ICONS
+
+
+
+<i class="fab fa-accessible-icon"></i> - wheelchair
+<i class="fas fa-baby"></i> - baby
+<i class="fas fa-child"></i> - child \o/
+<i class="far fa-copyright"></i>
+<i class="far fa-heart"></i> - heart
+
