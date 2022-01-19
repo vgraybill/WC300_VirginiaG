@@ -31,9 +31,6 @@ header h6 {
     padding: 7px 0 ;
     color: #ece7ef;
 }
-header h6 span {
-    display: hidden;
-}
 header h1 {
     width: 87%;
     background-image: url("../img/logo-small.png");
@@ -174,7 +171,7 @@ main {
 footer{
     position: relative;
     top: 400px;
-    background-color: rgba(24, 59, 72, .8);
+    background-color: rgba(24, 59, 72, .9);
     color: #ece7ef;
     font-size: .9rem;
     padding: 20px 15px;
@@ -214,20 +211,28 @@ footer .title ~ li {
 footer .social{
     display: flex;
     justify-content: space-around;
-    padding: 50px 0 10px;
+    padding: 50px 0 50px;
+}
+.social img{
+    width:90%;
+    margin: 0 auto;
+    display: block;
+    padding-left: 15px;
 }
 footer div{
     width: 95%;
 }
-footer div img{
+small+div img{
     margin:  0 auto;
     text-align: center;
     display: block;
+    width: 60%;
 }
 footer small{
     text-align: center;
     display: block;
     padding-bottom: 50px;
+    font-size: .75rem;
 }
 
 
@@ -239,6 +244,9 @@ footer small{
 @media screen and (min-width:390px) {
     header {
         max-height: 250px;
+    }
+    header h6{
+        font-size: .8rem;
     }
     header h1 {
         height:80px;
@@ -256,7 +264,7 @@ footer small{
         top: 169px;
     }
     .img-container article {
-        top: 330px;
+        top: 310px;
     }
     .img-container article h3 {
         font-size: 1.75rem;
@@ -276,7 +284,22 @@ footer small{
 
     footer {
         top:440px;
+        font-size: 1rem;
     }
+    .contact h4 {
+        font-size: 1.25rem;
 
+    }
+    .contact h5{
+        font-size: 1rem;
+        padding: 3px 0;
+    }
+    footer li.title {
+        font-size: 1.5rem;
+        padding-top: 50px;
+    }
+    footer small{
+        font-size: .8rem;
+    }
 
 }
