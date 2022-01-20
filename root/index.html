@@ -14,10 +14,10 @@
     <header>
         <h6>Financing your home is now easier than ever! <i class="fas fa-child"></i></h6>
         <div class="header-wrapper">
-            <h1>Bite Sized Building Company - Tiny Home Construction</h1>
+            <a href="index.html"><h1>Bite Sized Building Company - Tiny Home Construction</h1></a>
             <h2>Bite Sized Homes. Full Course Living. <i class="far fa-heart"></i></h2>
         </div>
-        <nav>
+        <nav class="mobile-nav">
             <i class="fas fa-bars closed"></i>
             <ul>
                 <a href=""><li>Builds</li></a>
@@ -28,6 +28,15 @@
                 <li><h4>Have Questions?</h4></li>
                 <li><h5>Open 9am - 5pm PST</h5></li>
                 <li><a class="phone" href="tel:6195551234">(619) 555-1234</a></li>
+            </ul>
+        </nav>
+        <nav class="tablet-nav">
+            <ul>
+                <a href=""><li>Builds</li></a>
+                <a href=""><li>Services</li></a>
+                <a href=""><li>Team</li></a>
+                <a href=""><li>Story</li></a>
+                <a href=""><li>Contact</li></a>
             </ul>
         </nav>
         <section class="hero">
@@ -124,8 +133,15 @@ Home Page
                 head.parent().transition({'background-color':'#ece7ef'}, 500);
                 bars.transition({'color':'#ece7ef'},200);
             }
+        });
 
-            
+        $('.tablet-nav').find('a').on('mouseenter', function(){
+            let button = $(this);
+            button.transition({'border-top':'2px solid #c2e1c9', 'border-bottom': '2px solid #c2e1c9'}, 200)
+        });
+        $('.tablet-nav').find('a').on('mouseleave', function(){
+            let button = $(this);
+            button.transition({'border-top':'2px solid transparent', 'border-bottom': '2px solid transparent'}, 100)
         });
 
 

@@ -47,7 +47,7 @@ header h2 {
     font-size: .75rem;
     font-family: 'hplight', sans-serif;
 }
-nav{
+nav.mobile-nav{
     font-size: 1.75rem;
     padding-top: 7px;
     background-color: rgba(24, 59, 72, .9);
@@ -58,12 +58,12 @@ nav{
     text-align: center;
     border-top: 1px solid #183b48;
 }
-nav i {
+nav.mobile-nav i {
     width: 100%;
     padding-bottom: 5px;
     cursor: pointer;
 }
-nav ul {
+nav.mobile-nav ul {
     text-align: left;
     height: 480px;
     padding: 0 15px;
@@ -80,7 +80,7 @@ li h5{
     padding-bottom: 10px;
     text-align: center;
 }
-nav ul a {
+nav.mobile-nav ul a {
     color: #ece7ef;
     line-height: 3rem;
     text-decoration: none;
@@ -255,10 +255,10 @@ footer small{
     header h2{
         font-size: 1rem;
     }
-    nav i {
+    nav.mobile-nav i {
         font-size: 2.25rem;
     }
-    nav ul {
+    nav.mobile-nav ul {
         height: 470px;
     }
     .img-container{
@@ -269,6 +269,9 @@ footer small{
     }
     .img-container article h3 {
         font-size: 1.75rem;
+    }
+    .hero {
+        height: 420px;
     }
 
 
@@ -302,5 +305,81 @@ footer small{
     footer small{
         font-size: .8rem;
     }
+
+}
+
+
+
+
+
+/* TABLET STYLES STARTING AT 730px (because it starts looking broken) */
+@media screen and (min-width:730px){
+    
+    header {
+        max-height: 300px;
+    }
+    header h1 {
+        height:100px;
+    }
+    header h2{
+        font-size: 1rem;
+    }
+    
+    
+    nav.mobile-nav {
+        display:none;
+    }
+    nav.tablet-nav{
+        font-size: 1.75rem;
+        padding-top: 7px;
+        background-color: rgba(24, 59, 72, .9);
+        z-index: 9999;
+        position: absolute;
+        width: 100%;
+        color:#ece7ef;
+        text-align: center;
+        border-top: 1px solid #183b48;
+    }
+    nav.tablet-nav ul{
+        display:flex;
+        justify-content: space-around;
+    }
+    nav.tablet-nav ul a{
+        color: #ece7ef;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 7px 0 9px;
+        margin-bottom:9px;
+        border-top:2px solid transparent;
+        border-bottom: 2px solid transparent;
+    }
+    .img-container{
+        top: 190px;
+        height: 550px;
+    }
+    .img-container article {
+        top: 390px;
+    }
+    .img-container article h3 {
+        font-size: 2.25rem;
+    }
+    .img-container article p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+    .hero {
+        height: 600px;
+        top:00px
+    }
+
+
+
+    main {
+        top: 480px;
+    }
+    footer {
+        top: 480px;
+    }
+
 
 }
