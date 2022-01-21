@@ -10,13 +10,24 @@
     <link href="css/fonts/webfontkit.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/843ca2f650.js" crossorigin="anonymous"></script>
 </head>
+
+
+
 <body>
     <header>
         <h6>Financing your home is now easier than ever! <i class="fas fa-child"></i></h6>
-        <div class="header-wrapper">
-            <a href="index.html"><h1>Bite Sized Building Company - Tiny Home Construction</h1></a>
-            <h2>Bite Sized Homes. Full Course Living. <i class="far fa-heart"></i></h2>
+        <div class="flex">
+            <div class="header-wrapper">
+                <a href="index.html"><h1>Bite Sized Building Company - Tiny Home Construction</h1></a>
+            </div>
+            <div class="tablet-nav">
+                <h4>Have Questions?</h4>
+                <h5>Open 9am - 5pm PST</h5>
+                <a class="phone" href="tel:6195551234">(619) 555-1234</a>
+            </div>
         </div>
+        <h2>Bite Sized Homes. Full Course Living. <i class="far fa-heart"></i></h2>
+
         <nav class="mobile-nav">
             <i class="fas fa-bars closed"></i>
             <ul>
@@ -55,6 +66,9 @@
 
     <main>
 Home Page
+<section class=main-wrapper>
+    Is this working? Why is position being a butt?
+</section>
     </main>
 
 
@@ -67,6 +81,12 @@ Home Page
                 <h5>San Diego, CA 92108</h5>
                 <h5>Open 9am - 5pm PST</h5>
                 <h5><a href="tel:6195551234">(619) 555-1234</a></h5>
+                <ul class="social">
+                    <li><a href="http://facebook.com" target="_blank"><img src="img/facebookicon.png" alt="the facebook icon"></a></li>
+                    <li><a href="http://instagram.com" target="_blank"><img src="img/instaicon.png" alt="the instagram icon"></a></li>
+                    <li><a href="http://tiktok.com" target="_blank"><img src="img/tiktokicon.png" alt="the tiktok icon"></a></li>
+                    <li><a href="http://twitter.com" target="_blank"><img src="img/twittericon.png" alt="the twitter icon"></a></li>
+                </ul>
             </section>
             <section class="site-map">
                 <ul>
@@ -92,16 +112,10 @@ Home Page
                     <li><a href="">Build Our Homes</a></li>
                 </ul>
             </section>
-            <ul class="social">
-                <li><a href="http://facebook.com" target="_blank"><img src="img/facebookicon.png" alt="the facebook icon"></a></li>
-                <li><a href="http://instagram.com" target="_blank"><img src="img/instaicon.png" alt="the instagram icon"></a></li>
-                <li><a href="http://tiktok.com" target="_blank"><img src="img/tiktokicon.png" alt="the tiktok icon"></a></li>
-                <li><a href="http://twitter.com" target="_blank"><img src="img/twittericon.png" alt="the twitter icon"></a></li>
 
-            </ul>
         </div>
         <small><i class="far fa-copyright"></i> Bite Sized Building Company 2022</small>
-        <div class="footer-wrapper">
+        <div class="dev-info">
             <a href="http://ginnygraybill.com" target="_blank"><img src="img/ggdesignslogo.png" alt="the G G Designs logo"/></a>
             <small>Designed by <a href="http://ginnygraybill.com" target="_blank"><strong>Ginny Graybill Designs</strong></a> 2022
             <p>For WC300 at Platt College - San Diego</p></small>
@@ -119,21 +133,27 @@ Home Page
             console.log(head)
             if(bars.hasClass('closed')){
                 bars.next().slideDown(900);
-                bars.parent().next().find('.hero-content').fadeOut(700);
+                bars.parent().next().next().find('.hero-content').fadeOut(700);
                 bars.removeClass('closed').addClass('open');
-                head.find('h2').transition({'color':'#ece7ef'}, 500);
+                head.parent().parent().transition({'background-color':'rgba(24, 59, 72, .9)'}, 500)
+                head.parent().parent().find('h2').transition({'color':'#ece7ef', 'background-color':'rgba(24, 59, 72, .9)'}, 500);
                 head.parent().transition({'background-color':'rgba(24, 59, 72, .9)'}, 500);
                 bars.transition({'color':'#c2e1c9'},200);
             }
             else if (bars.hasClass('open')){
                 bars.next().slideUp(900);
-                bars.parent().next().find('.hero-content').fadeIn(700);
+                bars.parent().next().next().find('.hero-content').fadeIn(700);
                 bars.removeClass('open').addClass('closed');
-                head.find('h2').transition({'color':'#183b48'}, 500);
+                head.parent().parent().transition({'background-color':'#ece7ef'}, 500)
+                head.parent().parent().find('h2').transition({'color':'#183b48','background-color':'#ece7ef'}, 500);
                 head.parent().transition({'background-color':'#ece7ef'}, 500);
                 bars.transition({'color':'#ece7ef'},200);
             }
         });
+
+        // let xnav = $('.header-wrapper').position();
+        // console.log(xnav)
+        // $('.img-container').css({'top':xnav+'px'});
 
         $('.tablet-nav').find('a').on('mouseenter', function(){
             let button = $(this);
