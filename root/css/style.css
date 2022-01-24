@@ -44,7 +44,7 @@ div.flex{
 }
 header h1 {
     width: 87%;
-    background-image: url("../img/logo-small.png");
+    background-image: url("../img/logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -101,6 +101,9 @@ nav.mobile-nav ul a {
 .tablet-nav{
     display: none;
 }
+
+
+
 li a.phone{
     background-color: transparent;
     border: 2px solid #c2e1c9;
@@ -176,11 +179,13 @@ li a.phone{
 }
 
 /* MAIN STYLES HOME PAGE */
-
+main.front{
+    top: 480px;
+}
 main {
     position: relative;
     background-color: #fff;
-    top: 480px
+    top: 48px;
 }
 .main-wrapper {
     width: 100%;
@@ -296,7 +301,9 @@ main {
     top: 570px;
 }
 .story img{
-    display: none;
+    display: block;
+    margin: 40px auto 0;
+    width:15%;
 }
 .story h4 {
     font-size: 1rem;
@@ -312,10 +319,12 @@ main {
 
 
 /* FOOTER STYLES */
-
+footer.front-footer{
+    top: 630px;
+}
 footer{
     position: relative;
-    top: 630px;
+    top:48px;
     background-color: rgba(24, 59, 72, .9);
     color: #ece7ef;
     font-size: .9rem;
@@ -427,7 +436,10 @@ footer small{
     /* MAIN STYLES 390px */
 
     main {
-        top: 440px
+        top:48px;
+    }
+    main.front{
+        top: 440px;
     }
     .main-wrapper article h3 {
         font-size: 1.3rem;
@@ -462,9 +474,6 @@ footer small{
         position: relative;
         top: 470px;
     }
-    .story img{
-        display: none;
-    }
     .story h4 {
         font-size: 1.4rem;
         font-family: 'goldbill_i';
@@ -487,8 +496,11 @@ footer small{
 
     /* FOOTER STYLES 390px */
 
-    footer {
+    footer.front-footer{
         top:960px;
+    }
+    footer {
+        top:48px;
         font-size: 1rem;
     }
     .contact h4 {
@@ -515,20 +527,22 @@ footer small{
 @media screen and (min-width:730px){
     
     header {
-        max-height: 290px;
+        height: 290px;
     }
     header h1 {
         height:100px;
-        background-image: url('../img/logo-mid.png');
         margin: 10px 0;
     }
     header h2{
         font-size: 1.25rem;
         text-align: center;
         padding-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
-    
+    /* PAGE STYLES */
+nav.tablet-nav ul a.current {
+    border-bottom: 2px solid #c2e1c9;
+}
     
     nav.mobile-nav {
         display:none;
@@ -593,7 +607,7 @@ footer small{
         background-image: url('../img/hero-medium.webp');
     }
     .img-container article {
-        top: 380px;
+        top: 370px;
     }
     .img-container article h3 {
         font-size: 2.25rem;
@@ -607,9 +621,12 @@ footer small{
     }
 
 
-
-    main {
+    main.front{
         top: 480px;
+    }
+    
+    main {
+        top: 48px;
     }
 
     .main-wrapper {
@@ -658,6 +675,20 @@ footer small{
         left: 25%;
     }
 
+
+/* BUILDS PAGE STYLES */
+
+#tiny-homes article {
+    height: 400px;
+    position: relative;
+}
+#tiny-homes article p:last-of-type {
+    font-size: 1.75rem;
+    padding-top: 15px;
+}
+
+
+
     .section-a{
         display: flex
     }
@@ -665,16 +696,18 @@ footer small{
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-around;
+        align-items: center;
     }
     .testimonials article{
         width:100%;
         margin: 0 auto 50px;
+        height: 400px;
         background-color: #ece7ef;
     }
     .testimonials article img{
         display: block;
-        width: 60%;
         margin: 0 auto;
+        width: 55%;
         box-shadow: 0 0 10px rgba(24, 59, 72, .9);
         z-index: 5;
         align-self: center;
@@ -722,9 +755,6 @@ footer small{
         margin: 0 15%;
         width: 70%;
     }
-    .story img{
-        display: none;
-    }
     .story h4 {
         font-size: 1.7rem;
         padding-bottom: 20px;
@@ -741,10 +771,11 @@ footer small{
     }
 
 
+footer{
+    top:55px;
+}
 
-
-
-    footer {
+    footer.front-footer {
         top: 1000px;
     }
     .footer-wrapper{
@@ -790,7 +821,7 @@ footer small{
 
 /* LARGE STYLES Desktop etc 900px */
 
-@media screen and (min-width:900px){
+@media screen and (min-width:918px){
     div.flex {
         max-width: 950px;
         margin-bottom: 20px;
@@ -805,7 +836,7 @@ footer small{
         max-width: 1200px;
     }
     .img-container article {
-        top: 500px;
+        top: 470px;
         max-width: 750px;
         margin: 0 auto;
     }
@@ -816,10 +847,8 @@ footer small{
         margin: 0 auto;
     }
 
-
-    main {
+    main.front{
         top: 650px;
-
     }
     .main-wrapper {
         max-width: 1100px;
@@ -837,7 +866,8 @@ footer small{
     }
     .testimonials article{
         width:100%;
-        margin: 0 auto 50px;
+        height: 280px;
+        margin: 0 auto 90px;
         max-width: 1200px;
     }
     .testimonials{
@@ -850,6 +880,8 @@ footer small{
         box-shadow: 0 0 transparent;
         margin: 150px auto 0;
         justify-content: space-evenly;
+        align-items: center;
+        max-height:800px;
     }
     .story .img-container{
         background: url('../img/founders.webp');
@@ -865,13 +897,10 @@ footer small{
         margin: 0;
         width: 100%;
         position: relative;
-        padding: 0 50px;
+        padding: 0 20px;
         top: 0;
     }
-    .story img{
-        display: block;
-        margin: 10px auto 0;
-    }
+ 
     .story h4 {
         font-size: 1.7rem;
         padding-bottom: 20px;
@@ -889,9 +918,11 @@ footer small{
 
 
 
-
-    footer { 
-        top:750px;
+    footer{
+        top:55px;
+    }
+    footer.front-footer { 
+        top:800px;
     }
 
     .footer-wrapper{
@@ -949,5 +980,7 @@ footer small{
 }
 
 @media screen and (min-width:1100px){
-
+    .story div:first-of-type{
+        padding: 0 50px;
+    }
 }

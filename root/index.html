@@ -64,7 +64,7 @@
 
 
 
-    <main>
+    <main class="front">
 
 <section class=main-wrapper>
     <article class="page-sections">
@@ -101,7 +101,7 @@
         <img src="img/testamonial2-small.webp" alt="a happy woman in the entry way to her home" title="A happy woman">
         <div>
             <h4>It's just enough space for me...</h4>
-            <p>Every inch of my <a href="interior/builds/index.html#minuet">Minuet Tiny Home</a> has a purpose. There's enough storage in this home for everything that was in my two bedroom apartment, and it's all easily accessable.</p>
+            <p>Every inch of my <a href="interior/builds/index.html#minuet">Minuet Tiny Home</a> has a purpose. There's a a ton of space, and it's all easily accessable.</p>
             <h5>Stacy Hannover</h5>
             <p><i class="far fa-heart"></i><small>Purchased in 2020</small></p>
         </div>
@@ -110,7 +110,7 @@
         <img src="img/testamonial3-small.webp" alt="two contractors infront of a tiny home" title="Our verified contractors">
         <div>
             <h4>Built with Love...</h4>
-            <p>We love taking on a Bite Sized project. Whether we're outfitting your garage into a granny flat, or putting together your new <a href="interior/builds/index.html#kipper">Kipper Home Kit</a>, you can trust us to get the job done right.</p>
+            <p>We love taking on a Bite Sized project. Whether we're outfitting your garage, or putting together a <a href="interior/builds/index.html#kipper">Kipper Home Kit</a>, you can trust us to get the job done right.</p>
             <h5>Bob's Better Builds</h5>
             <p><i class="far fa-heart"></i><small>Our Verified Contractors</small></p>
         </div>
@@ -124,7 +124,7 @@
         <p>Using Linda’s love and knowledge of architetural design, and Jim’s desire to build function living spaces, mainly the kitchen and entertaining areas, they designed their own tiny house in 2018.</p>
         <p>After building their own tiny home, and helping a few friends realize their own dreams of smaller living, Jim and Linda decided to bring their unique designs to market for anyone to build. All you needed was the time, money and motivation.</p>
         <p>These days, building a Bite Sized Home is easier than ever with their do it yourself build kits, 20+ affiliated contractors and furniture designs that fit any small space!</p>
-        <img src="img/bitesizedlogo.png" alt="bite sized building company logo"/>
+        <img src="img/logo-house.svg" alt="bite sized building company logo"/>
     </div>
     <div class="img-container"></div>
 </section>
@@ -133,7 +133,7 @@
 
 
 
-    <footer>
+    <footer class="front-footer">
         <div class="footer-wrapper">
             <section class="contact">
                 <h4>Bite Sized Building Company</h4>
@@ -185,85 +185,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha512-VRuRE7kBxU+JQr4R/7Y75cMMdeNnn5zDZRpT4qtEzAJXdMkmFPPGbS56Ch9/Lr2g5vnwN7PxtIdBvevTMVpnug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-
-        $('.fa-bars').on('click', function(){
-            let bars = $(this)
-            let head = bars.parent().parent().find('.header-wrapper')
-            console.log(head)
-            if(bars.hasClass('closed')){
-                bars.next().slideDown(900);
-                bars.parent().next().next().find('.hero-content').fadeOut(700);
-                bars.removeClass('closed').addClass('open');
-                head.parent().parent().transition({'background-color':'rgba(24, 59, 72, .9)'}, 500)
-                head.parent().parent().find('h2').transition({'color':'#ece7ef', 'background-color':'rgba(24, 59, 72, .9)'}, 500);
-                head.parent().transition({'background-color':'rgba(24, 59, 72, .9)'}, 500);
-                bars.transition({'color':'#c2e1c9'},200);
-            }
-            else if (bars.hasClass('open')){
-                bars.next().slideUp(900);
-                bars.parent().next().next().find('.hero-content').fadeIn(700);
-                bars.removeClass('open').addClass('closed');
-                head.parent().parent().transition({'background-color':'#ece7ef'}, 500)
-                head.parent().parent().find('h2').transition({'color':'#183b48','background-color':'#ece7ef'}, 500);
-                head.parent().transition({'background-color':'#ece7ef'}, 500);
-                bars.transition({'color':'#ece7ef'},200);
-            }
-        });
-
-        // let xnav = $('.header-wrapper').position();
-        // console.log(xnav)
-        // $('.img-container').css({'top':xnav+'px'});
-
-        $('.tablet-nav').find('a').on('mouseenter', function(){
-            let button = $(this);
-            button.transition({'border-top':'2px solid #c2e1c9', 'border-bottom': '2px solid #c2e1c9'}, 200)
-        });
-        $('.tablet-nav').find('a').on('mouseleave', function(){
-            let button = $(this);
-            button.transition({'border-top':'2px solid transparent', 'border-bottom': '2px solid transparent'}, 100)
-        });
-
-
-        $(window).on('resize', function(){
-        
-            let pHeight= $('.story div:first-of-type').height();
-            let pTop= $('.story div:first-of-type').position().top;
-            let pBottom= pHeight-pTop;
-
-            let imgTop= $('.story div:last-of-type').position().top;
-            let imgHeight = $('.story div:last-of-type').height();
-            let imgBottom = imgHeight-imgTop;
-
-            let newTop= pBottom + 20;
-            
-            if( $(window).width() < 900){
-            $('.story div:last-of-type').css({'top':newTop+'px'});
-            }
-
-            if ($(window).width() < 300){
-                $('footer').removeAttr('style').css({'top':'688px'})
-            }
-            else if( $(window).width() < 730){
-                $('footer').css({'top':newTop+490+'px'})
-            }
-            else if ( $(window).width() < 900){
-                $('footer').css({'top':newTop+530+'px'})
-            }
-            else if ($(window).width() > 900){
-                $('footer').removeAttr('style').css({'top':'750px'})
-                $('.story div:last-of-type').removeAttr('style');
-            }
-
-
-
-
-            
-        
-        });
-
-
-    </script>
+    <script src="js/js.js"></script>
 
 
 </body>
