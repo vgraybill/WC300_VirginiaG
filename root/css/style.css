@@ -10,7 +10,9 @@ font-family: 'hplight'; */
 * {
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* SMALLEST SIZE 280px (Galaxy Fold) */
 body {
     font-family: 'hplight', sans-serif;
@@ -18,6 +20,7 @@ body {
     color: #183b48;
     letter-spacing: 1px;
     line-height: 1.25rem;
+    
 
 }
 header{
@@ -183,8 +186,9 @@ main {
     width: 100%;
     margin-top: 50px;
     padding-bottom: 20px;
-    
-
+}
+.main-wrapper article a{
+    text-decoration: none;
 }
 .main-wrapper article {
     box-shadow: 0 2px 10px #183b48;
@@ -218,6 +222,10 @@ main {
     margin: 15px auto 30px;
     display: block;
     font-family: 'hp';
+    cursor: pointer;
+}
+.main-wrapper article button:hover{
+    background-color: #c2e1c9;
 }
 
 .testimonials article{
@@ -260,6 +268,7 @@ main {
     text-align: right;
     font-size: .8rem;
 }
+
 .testimonials article p:last-of-type small {
     font-size: .7rem;
     padding-left: 5px;
@@ -506,7 +515,7 @@ footer small{
 @media screen and (min-width:730px){
     
     header {
-        max-height: 300px;
+        max-height: 290px;
     }
     header h1 {
         height:100px;
@@ -517,7 +526,7 @@ footer small{
         font-size: 1.25rem;
         text-align: center;
         padding-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
     
     
@@ -611,7 +620,7 @@ footer small{
     
     }
     .main-wrapper article {
-        box-shadow: 0 2px 10px #183b48;
+        box-shadow: 0 2px 10px rgba(24, 59, 72, .7);
         margin-bottom: 40px;
         padding-bottom: 1px;
         width: 30%;
@@ -649,11 +658,94 @@ footer small{
         left: 25%;
     }
 
+    .section-a{
+        display: flex
+    }
+    .section-b{ 
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .testimonials article{
+        width:100%;
+        margin: 0 auto 50px;
+        background-color: #ece7ef;
+    }
+    .testimonials article img{
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(24, 59, 72, .9);
+        z-index: 5;
+        align-self: center;
+    }
+    .testimonials article div {
+        width: 85%;
+        padding: 30px 30px;
+        z-index: 4;
+    }
+    
+    .testimonials article h4 {
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+    }
+    .testimonials article p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-indent: 30px;
+        margin-bottom: 20px;
+    }
+    .testimonials article h5 {
+        font-size: 1.25rem;
+        padding-bottom: 15px;
+    }
+    .testimonials article p:last-of-type {
+        text-align: right;
+        font-size: 1.125rem;
+    }
+    
+    .testimonials article p:last-of-type small {
+        font-size: 1rem;
+        padding-left: 5px;
+    }
+
+    .story .img-container{
+        background: url('../img/founders-medium.webp');
+        width:100%;
+        height:750px;
+        background-size: cover;
+        background-position:top center;
+        position: relative;
+        top: 470px;
+    }
+    .story div:first-of-type{
+        margin: 0 15%;
+        width: 70%;
+    }
+    .story img{
+        display: none;
+    }
+    .story h4 {
+        font-size: 1.7rem;
+        padding-bottom: 20px;
+        line-height: 2rem;
+    }
+    .story p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-indent: 30px;
+        margin-bottom: 20px;
+    }
+    .story p:last-of-type {
+        margin-top: 50px;
+    }
+
+
 
 
 
     footer {
-        top: 480px;
+        top: 1000px;
     }
     .footer-wrapper{
         margin:0 auto;
@@ -737,17 +829,69 @@ footer small{
         height: 560px;
     }
     .main-wrapper article img {
-        width: 82%;
+        width: 100%;
         display: block;
-        margin: 8% auto;
+        margin: 0 auto;
         border: 1px solid rgb(177, 177, 177);
         
+    }
+    .testimonials article{
+        width:100%;
+        margin: 0 auto 50px;
+        max-width: 1200px;
+    }
+    .testimonials{
+        margin-top: 100px;
+    }
+    .story {
+        display: flex;
+        max-width: 1200px;
+        background-color: #fff;
+        box-shadow: 0 0 transparent;
+        margin: 150px auto 0;
+        justify-content: space-evenly;
+    }
+    .story .img-container{
+        background: url('../img/founders.webp');
+        background-position: center;
+        background-size: cover;
+        width:90%;
+        display: block;
+        top:0;
+        box-shadow: 0 0 10px rgb(167, 167, 167);
+        margin-right: 50px;
+    }
+    .story div:first-of-type{
+        margin: 0;
+        width: 100%;
+        position: relative;
+        padding: 0 50px;
+        top: 0;
+    }
+    .story img{
+        display: block;
+        margin: 10px auto 0;
+    }
+    .story h4 {
+        font-size: 1.7rem;
+        padding-bottom: 20px;
+        line-height: 2rem;
+    }
+    .story p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-indent: 30px;
+        margin-bottom: 20px;
+    }
+    .story p:last-of-type {
+        margin-top: 50px;
     }
 
 
 
+
     footer { 
-        top:650px;
+        top:750px;
     }
 
     .footer-wrapper{
@@ -775,7 +919,13 @@ footer small{
         padding: 50px 0px 0;
         margin: 0;
     }
-
+    footer .copyrite {
+        text-align: left;
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
     .dev-info{
         display:flex;
         justify-content:unset;
