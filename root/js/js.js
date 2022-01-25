@@ -67,3 +67,11 @@ $(window).on('resize', function(){
         $('.story div:last-of-type').removeAttr('style');
     }
 });
+$('.bhero figure').on('mouseenter', function(){
+    let button= $(this);
+button.transition({'background-color':'#c2e1c9'}, 400);
+});
+$('.bhero figure').on('mouseleave', function(){
+    let button= $(this);
+button.transition({'background-color':'transparent'}, 200);
+});
