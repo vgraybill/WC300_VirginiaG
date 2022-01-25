@@ -24,12 +24,20 @@ $('.fa-bars').on('click', function(){
 
 $('.tablet-nav').find('a').on('mouseenter', function(){
     let button = $(this);
-    button.transition({'border-top':'2px solid #c2e1c9', 'border-bottom': '2px solid #c2e1c9'}, 200)
+    
+    if (button.hasClass('phone')){
+        button.transition({'border-top':'2px solid transparent', 'border-bottom': '2px solid transparent'}, 100)
+    }
+    else {
+    button.transition({'border-top':'2px solid #c2e1c9', 'border-bottom': '2px solid #c2e1c9'}, 200)}
 });
 $('.tablet-nav').find('a').on('mouseleave', function(){
     let button = $(this);
     if (button.hasClass('current')){
         button.transition({'border-top':'2px solid transparent'}, 100)
+    }
+    else if (button.hasClass('phone')){
+        button.transition({'border-top':'2px solid transparent', 'border-bottom': '2px solid transparent'}, 100)
     }
     else{
     button.transition({'border-top':'2px solid transparent', 'border-bottom': '2px solid transparent'}, 100)
