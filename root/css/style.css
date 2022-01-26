@@ -182,14 +182,18 @@ li a.phone{
     position: relative;
     top: 50px;
 }
-.bhero figure {
+ figure {
     width: 30%;
     margin: 0 auto 30px;
     border: 1px solid rgba(24, 59, 72, .7);
     cursor: pointer;
-
 }
-.bhero figure figcaption{
+.team figure p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 0 5px;
+}
+ figure figcaption{
     text-align: center;
     padding-bottom: 5px;
 }
@@ -197,9 +201,25 @@ li a.phone{
     color: #183b48;
     text-decoration: none;
 }
-.bhero figure img{
+ figure img{
     width: 100%;
 }
+.team p {
+    font-size: 1rem;
+    padding: 0 20px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.team div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+
 section + hr {
     margin-top: 90px;
 }
@@ -216,6 +236,14 @@ hr + h2 {
 .tiny-homes.testimonials, .containers.testimonials, .furniture.testimonials {
     position: relative;
 }
+.design.testimonials article p:last-of-type{
+    text-align: left;
+}
+#team {
+    margin-top: 20px;
+}
+
+
 
 /* MAIN STYLES HOME PAGE */
 main.front{
@@ -568,11 +596,11 @@ footer small{
 .bhero{
     display: flex;
 }
-.bhero figure {
-    margin: 0 auto 10px;
+figure {
+    margin: 0 auto 30px;
 
 }
-.bhero figure figcaption{
+figure figcaption{
     padding: 0 5px 5px;
     font-style: 1rem;
 }
@@ -598,6 +626,36 @@ footer small{
     /* PAGE STYLES */
 nav.tablet-nav ul a.current {
     border-bottom: 2px solid #c2e1c9;
+}
+.design.testimonials article {
+    height: 620px;
+    position: relative;
+}
+.design.testimonials article.section-b, .design.testimonials article.section-a{
+    display: block;
+}
+.design.testimonials article.section-b img {
+    float: right;
+    margin: 20px
+}
+.design.testimonials article div {
+    margin: 0;
+}
+.design.testimonials article div h4{
+    line-height: 2.25rem;
+}
+.design.testimonials ul {
+    padding-bottom: 60px;
+}
+.design.testimonials ul li {
+    margin-left: 70px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    list-style: disc;
+}
+.team p {
+    font-size: 1.25rem;
+    line-height: 2rem;
 }
     
     nav.mobile-nav {
@@ -758,6 +816,11 @@ hr + h2 {
 .tiny-homes.testimonials article p.icons:last-of-type, .containers.testimonials article p:last-of-type {
     font-size: 1.75rem;
     padding-top: 15px;
+}
+
+ .design.testimonials article div {
+    height: 600px;
+    position: relative;
 }
 
 
@@ -933,6 +996,25 @@ footer{
     }
     .tiny-homes.testimonials article, .containers.testimonials article, .furniture.testimonials article{
         height: 400px;
+    }
+    .design.testimonials article {
+        height: 550px;
+        position: relative;
+    }
+    .design.testimonials {
+        margin-top: 0;
+    }
+    .design.testimonials ul {
+        padding-bottom: 60px;
+    }
+    .design.testimonials ul li {
+        margin-left: 70px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        list-style: disc;
+    }
+    #design {
+        margin-top: 25px;
     }
 
     main.front{
