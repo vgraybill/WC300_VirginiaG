@@ -9,4 +9,5 @@ FONT AWESOME ICONS
 <i class="fas fa-child"></i> - child \o/
 <i class="far fa-copyright"></i>
 <i class="far fa-heart"></i> - heart
+<i class="fas fa-caret-down"></i>
 

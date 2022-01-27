@@ -83,3 +83,27 @@ $('.bhero figure').on('mouseleave', function(){
     let button= $(this);
 button.transition({'background-color':'transparent'}, 200);
 });
+
+
+$('.faq section div').on('click', function(){
+    let button = $(this);
+    let pee = button.parent().find('p')
+    console.log(pee)
+    if (button.hasClass('closed')) {
+        pee.slideDown(300);
+        button.removeClass('closed').addClass('open');
+        button.find('i').transition({'transform':'rotate('+180+'deg)'}, 500)
+    }
+    else if (button.hasClass('open')) {
+        pee.slideUp(300);
+        button.removeClass('open').addClass('closed');
+        button.find('i').transition({'transform':'rotate('+0+'deg)'}, 500)
+    }
+});
+
+$('.off').on('mouseenter', function(){
+    $(this).transition({'background':'url("img/logo-house.svg")', 'background-repeat':'no-repeat'}, 1000)
+})
+$('.off').on('mouseleave', function(){
+    $(this).transition({'background':'url("img/logo-house-blue.svg")', 'background-repeat':'no-repeat'}, 500)
+})

@@ -35,6 +35,13 @@ header h6 {
     padding: 7px 0 ;
     color: #ece7ef;
 }
+h6 span {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+
 .header-wrapper{
     z-index: 7;
     width: 100%;
@@ -115,6 +122,9 @@ li a.phone{
     padding: 0 20px;
     margin: 30px auto;
     line-height: 2.5rem;
+}
+a.phone {
+    text-decoration: underline;
 }
 
 .img-container {
@@ -223,6 +233,9 @@ li a.phone{
 section + hr {
     margin-top: 90px;
 }
+h2 + hr{
+    margin-bottom: 20px;
+}
 hr + h2 {
     margin: 20px 0 20px;
     position: relative;
@@ -239,10 +252,14 @@ hr + h2 {
 .design.testimonials article p:last-of-type{
     text-align: left;
 }
-#team {
-    margin-top: 20px;
-}
 
+hr + p {
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    width: 95%;
+    margin: 0 auto 50px;
+    max-width: 700px;
+}
 
 
 /* MAIN STYLES HOME PAGE */
@@ -467,10 +484,173 @@ footer small{
 }
 
 
+/* FORM STYLES  */
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+input {
+    width: 95%;
+    padding: 7px;
+    margin-top: 7px;
+    border: 1px solid #cbc3cf;
+    border-radius: 2px;
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+form section div{
+    display: inline;
+}
+form section div input {
+    width: 15%;
+    
+}
+form section div label {
+    margin-right: 10px;
+}
+select {
+    width: 95%;
+    padding: 7px;
+    margin-top: 7px;
+    border: 1px solid #cbc3cf;
+    border-radius: 2px;
+}
+select:focus {
+    border: 1px solid #609e6f;
+}
+div + label {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 20px
+}
+form ul{
+    list-style: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+form ul li {
+    position: relative;
+    padding-bottom: 10px;
+    left: 15px
+}
+li input {
+    position: relative;
+    width: unset;
+    top:-5px;
+}
+textarea {
+    display: block;
+    width: 95%;
+    height: 90px;
+    margin-top: 10px;
+    border: 1px solid #cbc3cf;
+    border-radius: 2px;
+}
+#contact-form, #design, #team {
+    margin: 70px 0 0;
+}
+label {
+    font-size: 1rem;
+}
+form a {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid #183b48;
+    width: 40%;
+    margin: 20px auto 50px;
+    border-radius: 7px;
+}
+.faq {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 700px;
+    position: relative;
+}
+.faq section{
+    margin: 40px 0;
+}
+.faq section div{
+    margin: 10px 0 0;
+    border: 1px solid #cbc3cf;
+    padding: 10px;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+.faq i {
+    font-size: 1.5rem;
+}
+.faq section p {
+    font-size: 1rem;
+    padding: 10px 10px;
+    display: none;
+    position: relative;
+    background-color: #ece7ef;
+}
+.off {
+    width:200px;
+    margin: 0 auto;
+    background-image: url('../img/logo-house-blue.svg');
+    background-position: center;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.fourohfour .off p {
+    position: relative;
+    top: 50px;
+    font-size: 2.5rem;
+}
+
+.fourohfour p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    line-height: 2rem;
+}
+.fourohfour a p {
+    display: block;
+    font-size: 2rem;
+    color: #609e6f;
+    text-decoration: underline;
+    padding: 0;
+    line-height: 3rem;
+}
+.required {
+    text-align: center;
+    padding-top: 50px;
+    /* position: relative;
+    top: -45px;
+    margin-right: 20px; */
+}
 
 
 
-/* NEXT SMALLEST PHONE SIZE 390px (iphone 12 etc) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NEXT SMALLEST PHONE SIZE 360px (iphone 12 etc) */
 
 @media screen and (min-width:360px) {
     header {
@@ -506,9 +686,9 @@ footer small{
 
     /* MAIN STYLES 390px */
 
-    main {
+    /* main {
         top:50px;
-    }
+    } */
     main.front{
         top: 440px;
     }
@@ -595,6 +775,7 @@ footer small{
 /* Build page  */
 .bhero{
     display: flex;
+    margin-top: 20px;
 }
 figure {
     margin: 0 auto 30px;
@@ -607,9 +788,13 @@ figure figcaption{
 
 
 
+
 /* TABLET STYLES STARTING AT 730px (because it starts looking broken) */
 @media screen and (min-width:730px){
     
+    h6 span {
+        display: inline;
+    }
     header {
         height: 290px;
     }
@@ -627,19 +812,21 @@ figure figcaption{
 nav.tablet-nav ul a.current {
     border-bottom: 2px solid #c2e1c9;
 }
+
 .design.testimonials article {
-    height: 620px;
     position: relative;
 }
 .design.testimonials article.section-b, .design.testimonials article.section-a{
     display: block;
+    height:fit-content;
 }
 .design.testimonials article.section-b img {
     float: right;
-    margin: 20px
+    margin: 20px;
 }
 .design.testimonials article div {
     margin: 0;
+    height:fit-content;
 }
 .design.testimonials article div h4{
     line-height: 2.25rem;
@@ -738,10 +925,7 @@ nav.tablet-nav ul a.current {
     main.front{
         top: 480px;
     }
-    
-    main {
-        top: 55px;
-    }
+
 
     .main-wrapper {
         margin-top: 50px;
@@ -813,15 +997,60 @@ hr + h2 {
     height: 475px;
     position: relative;
 }
+.tiny-homes.testimonials article img, .containers.testimonials article img, .furniture.testimonials article img{
+    margin: 20px;
+    width: 40%;
+}
 .tiny-homes.testimonials article p.icons:last-of-type, .containers.testimonials article p:last-of-type {
     font-size: 1.75rem;
     padding-top: 15px;
 }
 
- .design.testimonials article div {
-    height: 600px;
-    position: relative;
+#team, #contact-form {
+    margin-top: 50px;
 }
+
+
+
+/* FORM STYLES */
+
+input {
+    width: 90%;
+    padding: 7px;
+    margin-top: 7px;
+    border: 1px solid #cbc3cf;
+    border-radius: 2px;
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+    flex-direction: row;
+}
+select {
+    width: 67%;
+    border: 1px solid #cbc3cf;
+    border-radius: 2px;
+}
+form ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 0;
+}
+form div:last-of-type{
+    align-items: flex-start;
+}
+form div:last-of-type label {
+    position:relative;
+    top: 5px;
+}
+textarea {
+    width: 85%;
+    border: 1px solid #cbc3cf;
+    border-radius: 2px;
+}
+
 
 
 
@@ -839,20 +1068,21 @@ hr + h2 {
     .testimonials article{
         width:100%;
         margin: 0 auto 50px;
-        height: 400px;
+        height: 320px;
         background-color: #ece7ef;
     }
     .testimonials article img{
         display: block;
-        margin: 0 auto;
-        width: 55%;
+        /* margin: 0 auto; */
+        width: 40%;
+        margin: 20px;
         box-shadow: 0 0 10px rgba(24, 59, 72, .9);
         z-index: 5;
         align-self: center;
     }
     .testimonials article div {
         width: 85%;
-        padding: 30px 30px;
+        padding: 30px 30px 15px;
         z-index: 4;
     }
     
@@ -984,12 +1214,16 @@ footer{
         max-width: 1200px;
         margin: 0 auto;
     }
+    hr {
+        width: 30%;
+        margin: 0 auto;
+    }
 
 
     /* BUILD PAGE */
     .bhero {
         max-width: 900px;
-        margin: 0 auto;
+        margin: 30px auto;
     }
     .bhero figure {
         width: 25%;
@@ -1036,7 +1270,7 @@ footer{
     }
     .testimonials article{
         width:100%;
-        height: 280px;
+        height: 370px;
         margin: 0 auto 90px;
         max-width: 1200px;
     }
@@ -1147,6 +1381,20 @@ footer{
         font-size: .75rem;
     }
 
+    #contact-form, #design, #team {
+        margin: 90px auto 0;
+    }
+    .required {
+        text-align: right;
+        position: relative;
+        top: -45px;
+        max-width: 1200px;
+        margin-right: 50px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
 }
 
 @media screen and (min-width:1100px){
