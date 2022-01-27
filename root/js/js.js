@@ -107,6 +107,16 @@ $('.off').on('mouseenter', function(){
 $('.off').on('mouseleave', function(){
     $(this).transition({'background':'url("img/logo-house-blue.svg")', 'background-repeat':'no-repeat'}, 500)
 })
-$(window).on('scroll', function(){
-    $('.sticky').css({'display':'block'});
-})
+$(window).on("scroll", function() {
+    var scrollPos = $(window).scrollTop();
+    
+    if (scrollPos <= 0) {
+        $(".sticky").fadeOut(300);
+    } else {
+        $(".sticky").fadeIn(1000);
+        // setTimeout(function() {
+        //     $(".sticky").delay(5000).fadeOut(300);
+        //     clearTimeout();
+        // }, 100);
+    }
+});

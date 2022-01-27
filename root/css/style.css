@@ -26,17 +26,20 @@ body {
 }
 .sticky {
     position: fixed;
-    top: 92%;
+    top: 90%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5rem;
-    background-color: #c2e1c9;
-    box-shadow: 0 0 20px 20px #c2e1c9;
+    font-size: 1.125rem;
+    background-color: #183b48;
+    box-shadow: 0 0 10px 10px #183b48;
     border-radius: 20px;
     display: none;
+    opacity: 60%;
+    z-index: 10;
+    font-family: 'hp';
 }
 .sticky a{
-    color: white;
+    color: #fff;
 }
 header{
     max-height: 180px;
@@ -242,7 +245,15 @@ a.phone {
     max-width: 900px;
     margin: 0 auto;
 }
-
+.team figure {
+    cursor: unset;
+}
+.veri {
+    border: none;
+    width: 50%;
+    max-width: 300px;
+    padding-bottom: 50px;
+}
 
 
 section + hr {
@@ -428,10 +439,11 @@ footer.front-footer{
 footer{
     position: relative;
     top:48px;
-    background-color: rgba(24, 59, 72, .9);
+    background-color: #2f4e5a;
     color: #ece7ef;
     font-size: .9rem;
     padding: 20px 15px;
+    z-index: 11;
 }
 .contact h4 {
     font-family: 'goldbill_i';
@@ -858,6 +870,20 @@ nav.tablet-nav ul a.current {
 .team p {
     font-size: 1.25rem;
     line-height: 2rem;
+}
+
+.team figure p {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0 0 5px;
+}
+.team figure figcaption {
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+.faq section p {
+    font-size: 1.25rem;
+    line-height: 1.9rem;
 }
     
     nav.mobile-nav {
@@ -1408,6 +1434,9 @@ footer{
         width: 80%;
         margin: 0 auto;
         padding: 0;
+    }
+    .sticky {
+        top: 87%;
     }
     
 }
