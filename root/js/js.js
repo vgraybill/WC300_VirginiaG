@@ -107,3 +107,6 @@ $('.off').on('mouseenter', function(){
 $('.off').on('mouseleave', function(){
     $(this).transition({'background':'url("img/logo-house-blue.svg")', 'background-repeat':'no-repeat'}, 500)
 })
+$(window).on('scroll', function(){
+    $('.sticky').css({'display':'block'});
+})

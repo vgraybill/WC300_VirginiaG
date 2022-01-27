@@ -10,6 +10,7 @@ font-family: 'hplight'; */
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -22,6 +23,20 @@ body {
     line-height: 1.25rem;
     
 
+}
+.sticky {
+    position: fixed;
+    top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    background-color: #c2e1c9;
+    box-shadow: 0 0 20px 20px #c2e1c9;
+    border-radius: 20px;
+    display: none;
+}
+.sticky a{
+    color: white;
 }
 header{
     max-height: 180px;
