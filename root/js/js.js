@@ -112,7 +112,11 @@ $(window).on("scroll", function() {
     
     if (scrollPos <= 0) {
         $(".sticky").fadeOut(300);
-    } else {
+    } 
+    else if ($(".sticky").hasClass('none') && $(window).outerWidth() > 730) {
+        $(".sticky").css({'display':'none'})
+    }
+     else {
         $(".sticky").fadeIn(1000);
         // setTimeout(function() {
         //     $(".sticky").delay(5000).fadeOut(300);
