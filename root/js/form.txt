@@ -1,0 +1,176 @@
+
+<?php include('scripts/contact.php');?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Disney's Boo-Bash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+<body>
+
+ <!-- START HEADER -->
+
+<header class="flex">
+
+<h1>Walt Disney world's After Hours Boo Bash</h1>
+<section class="flex">
+  <a href="https://disneyworld.disney.go.com/dining/#/reservations-accepted" target="_blank"><h2>BUY TICKETS</h2></a>
+<p class="tel">Call for Info <a href="">(555)555-5555</a></p>
+</section>
+
+</header>
+<div class="blueBar">
+  <nav>
+    <ul class="flex top">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="details.html">Details</a></li>
+      <li><a href="faq.php">FAQ</a></li>
+    </ul>
+  </nav>
+  <a href="#menu">Menu</a>
+</div>
+
+
+<!-- START MAIN -->
+
+
+<main>
+  <section class="hero" id="faq">
+    <h3>Frequently Asked Questions</h3>
+  </section>
+
+  <?php
+  if($_REQUEST['did_send']==1){
+    echo '<article class="'.$status.'">';
+    echo $display_msg;
+    echo '</article>';
+  }
+  ?>
+
+  <div class="articles flex faq">
+    <article>
+      <h2>Can I wear my costume to the park?</h2>
+      <div class="flex">
+        <img src="images/costumes.jpg" alt="" />
+        <p>
+        Guests young, old and immortal can don a costume for the occasion. Before you go, please review our dress code and costume guidelines. <a href="https://disneyworld.disney.go.com/faq/parks/dress/" target="_blank">Learn more.</a>
+        </p>
+      </div>
+    </article>
+  
+    <article>
+      <h2>What dates are still avaliable?</h2>
+        <p>
+        The 2021 Boo-Bash season is complete. But you can still celebrate the holiday season with <a href="https://disneyworld.disney.go.com/events-tours/magic-kingdom/disney-very-merriest-after-hours/">Disney Very Merriest After Hours</a>.
+        </p>
+    </article>
+  
+    <article>
+      <h2>Why is Disney so expensive?</h2>
+        <p>
+        To help make your experience as magical as possible, we magically make all your money disappear with over priced trinkets, treats and services. You'll be sure to leave with a smile on your face and not a cent in your pocket!
+        </p>
+    </article>
+  
+    <article>
+      <h2>Can spending all my money at Disney make me happy?</h2>
+        <p>
+          While there have been no offical studies on the matter, come to the parks and we'll let you be the judge.
+        </p>
+    </article>
+  
+    <article>
+      <h2>Why do my feet hurt so much by the end of the day at Disney?</h2>
+        <p>
+          While the park may seem small at first, soon you'll realize there's only a 30 minute wait for Space Mountain and you're all the way over in Fronteer Land. Then while getting off Spcae Mountain, Big Thunder reopens and the line is only 15 minutes long! Before long you'll have walked across the park over 10 times, your pedometer reads 30,000 steps taken, and you're still waiting in line for the shuttle back to the parking lot. Bring Tylonol.
+        </p>
+    </article>
+  
+    <article>
+      <h2>No seriously, can spending all my money at Disney make me happy?</h2>
+        <p>
+          Probably. Here's a video to help you decide.
+        </p>
+        <iframe width="95%" height="215px" src="https://www.youtube.com/embed/egOO3hwSpvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+<!--   
+---------------
+  START FORM 
+--------------- -->
+
+<form action="faq.php" method="post" name="signup" id="signup" class="cf morepadding">
+  <fieldset>
+    <legend>Didn't find what you were looking for? E-mail us here!</legend>
+
+      <label for="name" class="label">Name</label>
+      <input name="name" type="text" id="name" placeholder="John Smith">
+
+      <label for="email" class="label">E-mail Address</label>
+      <input name="email" id="email" type="email" pattern="([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,8}))" placeholder="yourname@domain.com">
+
+      <label for="tel" class="label">Phone Number</label>
+      <input name="tel" type="text" id="tel" placeholder="xxx xxx-xxxx">
+
+    <label for="message" class="label">How can we help?</label>
+    <textarea id="message" name="message"></textarea>
+    </fieldset>
+    <div>
+      <input type="submit" name="submit" value="Submit" id="submit" >
+      <button type="reset" name="button">Reset</button>
+    </div>
+    <input type="hidden" name="did_send" value="1">
+    </form>
+
+
+
+  <div class="flex sponsor">
+    <a href=""><img src="images/sponsor.jpg" alt=""/></a>
+    <div class="flex">
+      <p>Sponsored by</p>
+      <h4>Mars-Wrigley</h4>
+    </div>
+  </div>
+  
+  </main>
+  <!-- END MAIN -->
+  <footer>
+    <div class="blueBar bottom" id="menu">
+      <nav>
+        <ul class="flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html">Details</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li><a href="#">Back to Top</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="flex center">
+      <ul class="flex social">
+        <li><a href="https://www.facebook.com/WaltDisneyWorld" target="_blank"><img src="images/facebook.png" alt="" /></a></li>
+        <li><a href="https://twitter.com/waltdisneyworld/" target="_blank"><img src="images/twitter.png" alt="" /></a></li>
+        <li><a href="https://www.instagram.com/waltdisneyworld/" target="_blank"><img src="images/instagram-sketched.png" alt="" /></a></li>
+      </ul>
+      <div>
+        <h4>COVID-19 INFORMATION</h4>
+        <p>As we have done since reopening, we’ve been very intentional and gradual in our approach to our COVID-19 health and safety protocols. Based on recent trends and regulatory guidance, Walt Disney World Resort will be making adjustments to these measures, which may continue to change at any time without notice.
+    
+          <br><br>We encourage people to get vaccinated.
+          
+          <br><br>Some images shown throughout this website may not represent current operational guidelines.
+        
+        <br><br><a href="https://disneyworld.disney.go.com/experience-updates/" target="_blank">Click Here for More Information</a></p>
+      </div>
+    </div>
+  
+    <p class="copy">Copyrite info circa 2021</p>
+  </footer>
+
+</body>
+</html>
