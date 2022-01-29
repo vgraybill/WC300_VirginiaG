@@ -1,3 +1,5 @@
+<?php include('../../js/contact.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,9 +58,16 @@
         <hr id="contact-form">
         <h2>How can we help you?</h2>
         <hr>
-        <p>We're here to help! Please fill out this form with your inquiry and a member of our team will respond within three business days.</p>
+        <p></p>
+        <?php
+        if($_REQUEST['did_send']==1){
+          echo '<article class="'.$status.'">';
+          echo $display_msg;
+          echo '</article>';
+        }
+        ?>
         <section>
-            <form>
+            <form action="index.php" method="post" >
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name">
@@ -105,7 +114,8 @@
                     <label for="comment">Comments:</label>
                     <textarea></textarea>
                 </div>
-                <a href="">Submit</a>  
+                <input type="submit" name="submit" value="Submit" id="submit">
+                <input type="hidden" name="did_send" value="1">
             </form>
         </section>
 
@@ -202,6 +212,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha512-VRuRE7kBxU+JQr4R/7Y75cMMdeNnn5zDZRpT4qtEzAJXdMkmFPPGbS56Ch9/Lr2g5vnwN7PxtIdBvevTMVpnug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 </body>

@@ -34,10 +34,10 @@
             <i class="fas fa-bars closed"></i>
             <ul>
                 <a href="../builds/index.html"><li>Builds</li></a>
-                <a href="index.html" class= "current"><li>Services</li></a>
+                <a href="index.php" class= "current"><li>Services</li></a>
                 <a href="../team/index.html"><li>Team</li></a>
                 <a href="../../index.html#story"><li>Story</li></a>
-                <a href="../contact/index.html"><li>Contact</li></a>
+                <a href="../contact/index.php"><li>Contact</li></a>
                 <li><h4>Have Questions?</h4></li>
                 <li><h5>Open 9am - 5pm PST</h5></li>
                 <li><a class="phone" href="tel:6195551234">(619) 555-1234</a></li>
@@ -46,10 +46,10 @@
         <nav class="tablet-nav">
             <ul>
                 <a href="../builds/index.html"><li>Builds</li></a>
-                <a href="index.html" class= "current"><li>Services</li></a>
+                <a href="index.php" class= "current"><li>Services</li></a>
                 <a href="../team/index.html"><li>Team</li></a>
                 <a href="../../index.html#story"><li>Story</li></a>
-                <a href="../contact/index.html"><li>Contact</li></a>
+                <a href="../contact/index.php"><li>Contact</li></a>
             </ul>
         </nav>
         <section class="bhero">
@@ -98,33 +98,33 @@
         <h2>Have Questions?</h2>
         <hr>
         <p>We're here to help! Please fill out this form with your inquiry and a member of our team will respond within three business days.</p>
-        <section>
-            <?php
+        <?php
             if($_REQUEST['did_send']==1){
               echo '<article class="'.$status.'">';
               echo $display_msg;
               echo '</article>';
             }
             ?>
-            <form>
+        <section>
+            <form action="index.php" method="post">
                 <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
 
                 <div>
-                    <label for="email">E-mail:</label>
-                    <input type="text" id="email" name="email">
+                    <label for="email" >E-mail:</label>
+                    <input type="text" id="email" name="email" pattern="([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,8}))" placeholder="yourname@domain.com" required>
                 </div>
 
                 <div>
                     <label for="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone" placeholder="(xxx)xxx-xxxx">
                 </div>
 
                 <div>
                     <label for="inquiry">What can we help with?</label>
-                    <select id="inquiry" name="inquiry">
+                    <select id="inquiry" name="inquiry" required>
                         <option value="buildkits">Build Kits</option>
                         <option value="designservices">Design Services</option>
                         <option value="pre-builtkits">Pre-built Kits</option>
@@ -150,10 +150,10 @@
                     </li>
                 </ul>
                 <div>
-                    <label for="comment">Comments:</label>
-                    <textarea></textarea>
+                <label for="comment">Comments:</label>
+                    <textarea type="text" id="comment" name="comment" required></textarea>
                 </div>
-                <input type="submit" name="submit" value="Submit" id="submit">  
+                <button type="submit" name="button">Submit</button> 
                 <input type="hidden" name="did_send" value="1">
             </form>
 
@@ -184,9 +184,9 @@
                     <li><a href="../builds/index.html#furniture">Furniture Gallery</a></li>
                 </ul>
                 <ul>
-                    <li class="title"><a href="index.html">Services</a></li>
-                    <li><a href="index.html#design">Design</a></li>
-                    <li><a href="index.html#builders">Builders</a></li>
+                    <li class="title"><a href="index.php">Services</a></li>
+                    <li><a href="index.php#design">Design</a></li>
+                    <li><a href="index.php#builders">Builders</a></li>
                 </ul>
                 <ul>
                     <li class="title"><a href="../team/index.html">Team</a></li>
@@ -194,8 +194,8 @@
                     <li><a href="../../index.html#story">Our Story</a></li>
                 </ul>
                 <ul>
-                    <li class="title"><a href="../contact/index.html">Contact Us</a></li>
-                    <li><a href="../contact/index.html#faq">FAQ</a></li>
+                    <li class="title"><a href="../contact/index.php">Contact Us</a></li>
+                    <li><a href="../contact/index.php#faq">FAQ</a></li>
                     <li><a href="../careers/index.html">Careers</a></li>
                     <li><a href="../careers/index.html#boh">Build Our Homes</a></li>
                 </ul>
@@ -216,6 +216,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha512-VRuRE7kBxU+JQr4R/7Y75cMMdeNnn5zDZRpT4qtEzAJXdMkmFPPGbS56Ch9/Lr2g5vnwN7PxtIdBvevTMVpnug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../js/js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+$("#commentForm").validate();
+</script>
 
 
 </body>

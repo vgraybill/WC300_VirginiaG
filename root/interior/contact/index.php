@@ -34,10 +34,10 @@
             <i class="fas fa-bars closed"></i>
             <ul>
                 <a href="../builds/index.html"><li>Builds</li></a>
-                <a href="index.html" class= "current"><li>Services</li></a>
+                <a href="../services/index.php"><li>Services</li></a>
                 <a href="../team/index.html"><li>Team</li></a>
                 <a href="../../index.html#story"><li>Story</li></a>
-                <a href="../contact/index.html"><li>Contact</li></a>
+                <a href="index.php"  class= "current"><li>Contact</li></a>
                 <li><h4>Have Questions?</h4></li>
                 <li><h5>Open 9am - 5pm PST</h5></li>
                 <li><a class="phone" href="tel:6195551234">(619) 555-1234</a></li>
@@ -46,85 +46,46 @@
         <nav class="tablet-nav">
             <ul>
                 <a href="../builds/index.html"><li>Builds</li></a>
-                <a href="index.html" class= "current"><li>Services</li></a>
+                <a href="../services/index.php"><li>Services</li></a>
                 <a href="../team/index.html"><li>Team</li></a>
                 <a href="../../index.html#story"><li>Story</li></a>
-                <a href="../contact/index.html"><li>Contact</li></a>
+                <a href="index.php"  class= "current"><li>Contact</li></a>
             </ul>
         </nav>
-        <section class="bhero">
-            
-        </section>
     </header>
 
     <main>
-        <hr id="design">
-        <h2>Design Services</h2>
-        <hr>
-        <section class="design testimonials">
-            <article class="section-b">
-                <img src="../../img/design.webp" alt="" title="">
-                <div>
-                    <h4>Have something in mind?</h4>
-                    <p>Handmade or computer made blueprints. Easy to build, sustainable and ecological and well thought project design customized for you! Tiny House designs are easy, very flexible and can sustain your life necessities without inconveniences. Custom interior design on each project. Feel free to inquire on your design, and we can advise you for completely free.</p>
-                    <ul>
-                        <li>Contact us to start your order and we’ll give you a timeline, availability and cost of your project.</li>
-                        <li>Project times and costs may vary depending on the size or complexity.</li>
-                        <li>Blueprints include all needed materials listed. Materials are not included.</li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-
-
-        <hr id="builders">
-        <h2>Building Services</h2>
-        <hr>
-        <section class="design testimonials">
-            <article class="section-b">
-                <img src="../../img/builds.webp" alt="" title="">
-                <div>
-                    <h4>We'll build it for you!</h4>
-                    <p>Our Rustic, Bare and Kipper tiny homes can come pre-built! Let us put together your home and have it shipped right to your newly cleared property. We'll ship anywhere within California, Oregon, Nevada and Washington State, shipping costs vary by region and distance.</p>
-                    <ul>
-                        <li>Contact us to start your order and we’ll give you a timeline, availability and cost of your project.</li>
-                        <li>Cost varies between the Rustic, Bare and Kipper design kits.</li>
-                        <li>Building Services are first come first serve. Shipping, Building and Kit costs all apply.</li>
-                    </ul>
-                </div>
-            </article>
-        </section>
         <hr id="contact-form">
-        <h2>Have Questions?</h2>
+        <h2>How can we help you?</h2>
         <hr>
         <p>We're here to help! Please fill out this form with your inquiry and a member of our team will respond within three business days.</p>
+        <?php
+        if($_REQUEST['did_send']==1){
+          echo '<article class="'.$status.'">';
+          echo $display_msg;
+          echo '</article>';
+        }
+        ?>
         <section>
-            <?php
-            if($_REQUEST['did_send']==1){
-              echo '<article class="'.$status.'">';
-              echo $display_msg;
-              echo '</article>';
-            }
-            ?>
-            <form>
-                <div>
+            <form action="index.php" method="post" >
+            <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
 
                 <div>
-                    <label for="email">E-mail:</label>
-                    <input type="text" id="email" name="email">
+                    <label for="email" >E-mail:</label>
+                    <input type="text" id="email" name="email" pattern="([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,8}))" placeholder="yourname@domain.com" required>
                 </div>
 
                 <div>
                     <label for="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone" placeholder="(xxx)xxx-xxxx">
                 </div>
 
                 <div>
                     <label for="inquiry">What can we help with?</label>
-                    <select id="inquiry" name="inquiry">
+                    <select id="inquiry" name="inquiry" required>
                         <option value="buildkits">Build Kits</option>
                         <option value="designservices">Design Services</option>
                         <option value="pre-builtkits">Pre-built Kits</option>
@@ -151,14 +112,50 @@
                 </ul>
                 <div>
                     <label for="comment">Comments:</label>
-                    <textarea></textarea>
+                    <textarea type="text" id="comment" name="comment" required></textarea>
                 </div>
-                <input type="submit" name="submit" value="Submit" id="submit">  
+                <button type="submit" name="button">Submit</button>
                 <input type="hidden" name="did_send" value="1">
             </form>
-
         </section>
 
+        <hr id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <hr>
+        <section class="faq">
+            <section>
+                <div class="closed">
+                    <h5> Can our builds be ADU compliant?</h5>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <p> Yes! Make a note in the comment section of your build form that you’re looking for an ADU and we’ll make it happen.</p>
+            </section>
+            
+            <section>
+                <div class="closed">
+                    <h5>Do we transport or do shipping?</h5>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <p>Yes! We ship anywhere to anywhere in the United States, through a third party company for a $500 minimum/ approx. $2 per mile.</p>
+            </section>
+
+            <section>
+                <div class="closed">
+                    <h5>Do we offer financing?</h5>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <p>We allow financing through third party companies. We suggest Opendoor, Check out their offer page for the links to apply!</p>
+            </section>
+
+            <section>
+                <div class="closed">
+                    <h5>Do we build on permanent foundations?</h5>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <p>We don't, but we know plenty of contractors who will! Check out our <a href="../team/index.html#contractors">Team</a> page to discover the contractor who's right for you.</p>
+            </section>
+
+        </section>
         <p class="sticky none"><a href="index.html#">Back to Top</a></p>
     </main>
     <footer>
@@ -184,9 +181,9 @@
                     <li><a href="../builds/index.html#furniture">Furniture Gallery</a></li>
                 </ul>
                 <ul>
-                    <li class="title"><a href="index.html">Services</a></li>
-                    <li><a href="index.html#design">Design</a></li>
-                    <li><a href="index.html#builders">Builders</a></li>
+                    <li class="title"><a href="../services/index.php">Services</a></li>
+                    <li><a href="../services/index.php#design">Design</a></li>
+                    <li><a href="../services/index.php#builders">Builders</a></li>
                 </ul>
                 <ul>
                     <li class="title"><a href="../team/index.html">Team</a></li>
@@ -194,8 +191,8 @@
                     <li><a href="../../index.html#story">Our Story</a></li>
                 </ul>
                 <ul>
-                    <li class="title"><a href="../contact/index.html">Contact Us</a></li>
-                    <li><a href="../contact/index.html#faq">FAQ</a></li>
+                    <li class="title"><a href="index.php">Contact Us</a></li>
+                    <li><a href="index.php#faq">FAQ</a></li>
                     <li><a href="../careers/index.html">Careers</a></li>
                     <li><a href="../careers/index.html#boh">Build Our Homes</a></li>
                 </ul>
